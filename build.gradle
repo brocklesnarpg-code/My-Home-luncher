@@ -1,0 +1,28 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.example.glassylauncher'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.glassylauncher"
+        minSdk 21
+        targetSdk 34
+        versionCode 20
+        versionName "2.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.debug   // replace with your own keystore for release
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+// No third-party libraries: pure Android SDK, keeps RAM/CPU and APK size minimal.
